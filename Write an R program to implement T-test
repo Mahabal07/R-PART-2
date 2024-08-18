@@ -1,0 +1,19 @@
+# Sample data for Group 1  
+group1 <- c(23, 25, 29, 28, 32)  
+# Sample data for Group 2  
+group2 <- c(35, 38, 42, 39, 40)  
+# Perform independent samples t-test  
+t_result <- t.test(group1, group2)  
+# Print the results  
+cat("T-Test Results:\n")  
+cat(" - p-value:", t_result$p.value, "\n")  
+cat(" - t-statistic:", t_result$statistic, "\n")  
+cat(" - Degrees of Freedom:", t_result$parameter, "\n")  
+cat(" - Confidence Interval (95%): [", t_result$conf.int[1], ",", t_result$conf.int[2], "]\n")  
+cat(" - Test Conclusion:")  
+if (t_result$p.value < 0.05)  
+{  
+cat(" Reject the null hypothesis (significant difference)\n")  
+} else {  
+cat(" Fail to reject the null hypothesis (no significant difference)\n")  
+}  
