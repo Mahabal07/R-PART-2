@@ -1,0 +1,9 @@
+marks = c(10,20,30,40,50) 
+barplot(marks, 
+        main = "Barplot for marks of 5 subjects", 
+        xlab = "Subjects", 
+        ylab = "Marks", 
+        names.arg = c("English","Maths","History","Hindi","Geography"), 
+        col = "pink", 
+        horiz = FALSE 
+)
