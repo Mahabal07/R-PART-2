@@ -1,0 +1,18 @@
+data_txt <- read.delim(file.choose(), header = TRUE) 
+print("Data read from the chosen .txt file:") 
+print(data_txt) 
+ 
+Output : You can open any files and print , read like (txt, docx, xlsx) files. 
+ 
+ 
+# Writing to a file 
+# Open a connection to the file in write mode 
+file_conn <- file("C:/Users/SuperITCom/Desktop/BCA/R Programming/example.txt", 
+"w") 
+ 
+# Write lines to the file 
+writeLines(c("Hello, world!", "This is an example file.", "We are writing to it using R."), 
+file_conn) 
+ 
+# Close the file connection 
+close(file_conn)
