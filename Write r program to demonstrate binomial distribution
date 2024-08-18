@@ -1,0 +1,16 @@
+# Calculate the PMF of the binomial distribution  
+# at x = 3, with size = 10 and prob = 0.5 
+dbinom(3, size = 10, prob = 0.5) 
+ 
+# Calculate the CDF of the binomial distribution  
+# up to q = 5, with size = 10 and prob = 0.5 
+pbinom(5, size = 10, prob = 0.5) 
+ 
+# Calculate the quantile q such that the probability of  
+# observing a value less than or equal to q is p = 0.3, 
+# with size = 10 and prob = 0.5 
+qbinom(0.3, size = 10, prob = 0.5) 
+ 
+# Generate 10 random samples from the binomial distribution  
+# with size = 10 and prob = 0.5 
+rbinom(10, size = 10, prob = 0.5)
