@@ -1,0 +1,48 @@
+
+# Load ggplot2 package 
+library(ggplot2) 
+
+# Create a sample data frame 
+data <- data.frame( 
+  Subject = c("Math", "English", "Science", "History", 
+              "Geography"), Marks = c(85, 90, 78, 88, 92) 
+) 
+
+
+# Basic bar plot 
+ggplot(data, aes(x = Subject, y = Marks, fill = Subject)) + 
+  geom_bar(stat = "identity") + 
+  labs(title = "Marks in 5 
+Subjects", x = "Subject", 
+       y = "Marks") + 
+  theme_minimal() # Load necessary library
+library(ggplot2)
+
+# Create a sample dataset for the scatter plot
+data_scatter <- data.frame(
+  X = rnorm(100),
+  Y = rnorm(100),
+  Group = sample(c("A", "B"), 100, replace = TRUE)
+)
+
+# Create a scatter plot using ggplot2
+ggplot(data_scatter, aes(x = X, y = Y, color = Group)) + 
+  geom_point(size = 3) + 
+  labs(
+    title = "Scatter Plot Example",
+    x = "X Axis",
+    y = "Y Axis"
+  ) + 
+  theme_classic()
+# Create a sample dataset for line plot 
+data_line <- data.frame( Time = 
+                           1:10, 
+                         Value = cumsum(rnorm(10)) 
+) 
+
+# Line plot with ggplot2 
+ggplot(data_line, aes(x = Time, y = Value)) + 
+  geom_line(color = "blue") + geom_point(size = 3, 
+                                         color = "red") + labs(title = "Line Plot Example", 
+                                                               x = "Time", 
+                                                               y = "Value") + theme_bw()
